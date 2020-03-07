@@ -24,6 +24,9 @@ public class CarController : MonoBehaviour {
 
             // 把滑動長度轉換成初始速度
             this._speed = swipeLength / 1000.0f;
+
+            // 播放音效
+            GetComponent<AudioSource>().Play();
         }
 
         transform.Translate(this._speed, 0, 0); // 移動
